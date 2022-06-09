@@ -1,17 +1,17 @@
 # Binary Search in python
 
 
-def binarySearch(array, x, low, high):
-
+def binary_search(target, array):
+    low, high = 0, len(array)-1
     # Repeat until the pointers low and high meet each other
     while low <= high:
 
         mid = low + (high - low)//2
 
-        if array[mid] == x:
+        if array[mid] == target:
             return mid
 
-        elif array[mid] < x:
+        elif array[mid] < target:
             low = mid + 1
 
         else:
@@ -20,19 +20,15 @@ def binarySearch(array, x, low, high):
     return -1
 
 
-array = [3, 4, 5, 6, 7, 8, 9]
-x = 7
+# array = [3, 4, 5, 6, 7, 8, 9]
+# x = 7
 
-result = binarySearch(array, x, 0, len(array)-1)
-
-if result != -1:
-    print("Element is present at index " + str(result))
-else:
-    print("Not found")
+#print(binary_search(x, array))
 
 
-
-
+[1, 5, 7, 2, 3, 8, 4, 9]
+[1, 5, 7, 2, ]
+[1, 5, 7, 2, 3, 8, 4, 9]
 
 # print(binary_search(7, largeArray))
 
